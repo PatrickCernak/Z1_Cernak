@@ -1,0 +1,39 @@
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+header,nav,footer {
+    display: none;
+}
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    min-height: auto;
+}
+
+
+
+.column-one, .column-two {
+    background-color: white;
+    color: black;
+}
+
+.column-two h2 {
+    color: black;
+}
+
+.column-one {
+    padding: 20px 30px 20px 20px;
+    
+}
+
+.column-two {
+    padding: 24px 30px;
+    border-left: 1px solid #000;
+}
+
+.cv-container {
+    min-height: auto;
+}
