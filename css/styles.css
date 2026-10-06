@@ -7,6 +7,9 @@
     --color-text: #ffffff;
     --color-text-muted: #b8b8b8;
     --color-quote: #db4242;
+    --color-schedule-lecture: #e68e29;
+    --color-schedule-exercise: #239e75;
+    --color-schedule-physical: #3d78c5;
 
     --radius: 12px;
     --space: 1rem;
@@ -114,7 +117,7 @@ nav a.active {
     padding-bottom: 4px;
 }
 
-section h2 {
+h2 {
     color: var(--color-gold);
 }
 
@@ -427,6 +430,182 @@ footer a:hover {
     display: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 2px solid var(--color-surface) ;
+    
+}
+
+thead th {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+tbody th, tbody td {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+tbody td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+}
+
+thead th, tbody th[scope="row"] {
+    color: var(--color-gold);
+}
+
+td.lecture {
+    color: var(--color-schedule-lecture);
+}
+td.exercise {
+    color: var(--color-schedule-exercise);
+}
+td.physical-education {
+    color: var(--color-schedule-physical);
+}
+
+tbody tr:nth-of-type(odd)  {
+    background-color: var(--color-background-footer);
+}
+
+
+.schedule-menu {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+
+}
+
+button.filter-button {
+    color: var(--color-light-gold);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 0.8rem 1.2rem;
+
+    background-color: var(--color-background);
+    border: 2px solid var(--color-surface);
+}
+
+button.filter-button:hover {
+    color: var(--color-gold);
+    cursor: pointer;
+}
+
+button.filter-button.active {
+    color: var(--color-gold);
+    font-weight: 700;
+    border: 3px solid var(--color-surface);
+    
+}
+
+
+
+
+
+
+
+
+#map {
+    height: 700px;
+    width: 100%;
+}
+
+.map-controls {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: var(--color-background-footer);
+    border: 1px solid var(--color-surface);
+    border-radius: var(--radius);
+}
+
+.map-controls ul {
+    position: static;
+    left: auto;
+    max-height: 70px;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+
+}
+
+.map-controls li button {
+    width: 90%;
+    padding: 8px;
+    border: 2px solid var(--color-surface);
+    border-radius: var(--radius);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.map-controls ul::-webkit-scrollbar {
+    width: 15px;
+}
+
+.map-controls ul::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+    border-radius: var(--radius);
+}
+
+.map-controls ul::-webkit-scrollbar-thumb {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+}
+
+.map-controls ul::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gold);
+    cursor: pointer;
+}
+
+
+.map-controls h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.map-controls label {
+    color: var(--color-light-gold);
+}
+
+.map-controls select {
+    cursor: pointer;
+    width: 20%;
+    border: 1px solid var(--color-surface);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font: inherit;
+}
+
+.map-controls button {
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid var(--color-gold);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -456,7 +635,16 @@ footer a:hover {
     }
 
 
+    .profile-image {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+        width: 60%;
+        height: auto;
+    }
 
+
+    
 
     .cv-container {
         grid-template-columns: 1fr;

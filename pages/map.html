@@ -10,6 +10,12 @@
 
     <link rel="icon" href="../favicon.ico">
 
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
     <title>Kde ma nájdete | Patrik Černák</title>
     <meta name="description" content="Mapa s miestami spojenými s Patrikom Černákom.">
 </head>
@@ -44,7 +50,47 @@
 
 
     <main>
+        <h2>Mapa mojich miest</h2>
 
+        <div id="map"></div>
+
+        <section class="map-controls">
+            <h2>Moje body</h2>
+
+            <p id="empty-state">
+                Zatiaľ nemám pridaný žiadny vlastný bod.
+                Kliknite na mapu a pridajte miesto.
+            </p>
+
+            <ul id="point-list"></ul>
+        </section>
+
+        <section class="map-controls">
+            <h2>Výber trasy</h2>
+
+            <label for="point-select">Vyberte bod:</label>
+            <select id="point-select">
+                <option value="">Vyberte bod</option>
+            </select>
+
+            <label for="target-select">Vyberte cieľ:</label>
+            <select id="target-select">
+                <option value="school">Škola</option>
+                <option value="home">Bydlisko</option>
+            </select>
+
+            <button id="calculate-route">Vypočítať vzdialenosť</button>
+
+            <p id="route-result">
+                Najprv pridajte bod a potom vyberte cieľ.
+            </p>
+        </section>
+
+        <!-- Leaflet JavaScript -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <!-- Vlastný JavaScript -->
+        <script src="../js/script.js"></script>
     </main>
 
 
