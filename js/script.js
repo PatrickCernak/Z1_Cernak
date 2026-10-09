@@ -1,3 +1,130 @@
+const SEMESTER_START = new Date("2026-09-01T00:00:00");
+const SEMESTER_END = new Date("2027-02-14T23:59:59");
+const currentDate = new Date();
+const totalDuration = SEMESTER_END - SEMESTER_START;
+const elapsedDuration = currentDate - SEMESTER_START;
+
+const semesterPercentage = Math.min(
+    100,
+    Math.max(0, (elapsedDuration / totalDuration) * 100)
+);
+
+const progressBar = document.getElementById("semester-progress");
+const progressLabel = document.getElementById("semester-progress-label");
+
+if (progressBar && progressLabel) {
+    progressBar.value = semesterPercentage;
+    progressLabel.textContent = "Uplynulo " + Math.round(semesterPercentage) + " % semestra.";
+}
+
+
+
+const currentLessonStatus = document.getElementById("current-lesson-status");
+
+const lessonCells = document.querySelectorAll(
+    "tbody td[data-day][data-start][data-end]"
+);
+
+if (currentLessonStatus && lessonCells.length > 0) {
+    const now = new Date();
+    const currentDay = now.getDay();
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+    let activeLesson = null;
+
+    lessonCells.forEach(function (cell) {
+        cell.classList.remove("current-lesson");
+
+        const startParts = cell.dataset.start.split(":");
+        const endParts = cell.dataset.end.split(":");
+
+        const startMinutes =
+            Number(startParts[0]) * 60 + Number(startParts[1]);
+
+        const endMinutes =
+            Number(endParts[0]) * 60 + Number(endParts[1]);
+
+        if (
+            Number(cell.dataset.day) === currentDay &&
+            currentMinutes >= startMinutes &&
+            currentMinutes < endMinutes
+        ) {
+            activeLesson = cell;
+            cell.classList.add("current-lesson");
+        }
+    });
+
+    if (activeLesson) {
+        currentLessonStatus.textContent =
+            "Práve prebieha hodina: " +
+            activeLesson.textContent.trim() +
+            " (" +
+            activeLesson.dataset.start +
+            " – " +
+            activeLesson.dataset.end +
+            ").";
+    } else {
+        let nextLesson = null;
+
+        lessonCells.forEach(function (cell) {
+            const startParts = cell.dataset.start.split(":");
+
+            const startMinutes =
+                Number(startParts[0]) * 60 + Number(startParts[1]);
+
+            const dayDifference =
+                (Number(cell.dataset.day) - currentDay + 7) % 7;
+
+            let difference =
+                dayDifference * 24 * 60 + startMinutes - currentMinutes;
+
+            if (difference <= 0) {
+                difference += 7 * 24 * 60;
+            }
+
+            if (!nextLesson || difference < nextLesson.difference) {
+                nextLesson = {
+                    cell: cell,
+                    difference: difference
+                };
+            }
+        });
+
+        const dayNames = [
+            "v nedeľu",
+            "v pondelok",
+            "v utorok",
+            "v stredu",
+            "vo štvrtok",
+            "v piatok",
+            "v sobotu"
+        ];
+
+        if (nextLesson) {
+            currentLessonStatus.textContent =
+                "Momentálne neprebieha žiadna hodina. " +
+                "Najbližšia hodina je " +
+                dayNames[Number(nextLesson.cell.dataset.day)] +
+                " o " +
+                nextLesson.cell.dataset.start +
+                ".";
+        } else {
+            currentLessonStatus.textContent =
+                "Momentálne nie je naplánovaná žiadna hodina.";
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("nav ul");
 

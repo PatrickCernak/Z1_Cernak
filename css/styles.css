@@ -485,6 +485,22 @@ tbody tr:nth-of-type(odd)  {
 }
 
 
+td.current-lesson {
+    background-color: var(--color-background);
+    color: var(--color-gold);
+    font-weight: 700;
+    outline: 3px solid var(--color-gold);
+    outline-offset: -3px;
+}
+
+.current-lesson-status {
+    display: grid;
+    justify-items: center;
+    color: var(--color-gold);
+    padding: 1rem 0 0 0;
+}
+
+
 .schedule-menu {
     display: grid;
     justify-items: center;
@@ -514,6 +530,31 @@ button.filter-button.active {
     border: 3px solid var(--color-surface);
     
 }
+
+
+.semester-progress {
+    display: grid;
+    justify-items: center;
+    padding: 0 2rem 1rem;
+}
+
+.semester-progress p {
+    color: var(--color-light-gold);
+}
+
+#semester-progress {
+    accent-color: var(--color-gold);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -646,6 +687,7 @@ button.filter-button.active {
 
     
 
+
     .cv-container {
         grid-template-columns: 1fr;
     }
@@ -657,6 +699,8 @@ button.filter-button.active {
     .column-two {
         padding: 25px;
     }
+
+
 
 
 
@@ -761,5 +805,24 @@ button.filter-button.active {
         transform: translateY(0);
     }
     
+
+
+
+
+
+
+
+    .schedule-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule-table-wrapper table {
+        min-width: 1000px;
+    }
+
+
+
 
 }

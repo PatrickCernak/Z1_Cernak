@@ -52,68 +52,88 @@
             <button class="filter-button" data-filter="exercise">Cvičenia</button>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">Deň</th>
-                    <th scope="col">7:00</th>
-                    <th scope="col">8:00</th>
-                    <th scope="col">9:00</th>
-                    <th scope="col">10:00</th>
-                    <th scope="col">11:00</th>
-                    <th scope="col">12:00</th>
-                    <th scope="col">13:00</th>
-                    <th scope="col">14:00</th>
-                    <th scope="col">15:00</th>
-                    <th scope="col">16:00</th>
-                    <th scope="col">17:00</th>
-                    <th scope="col">18:00</th>
-                    <th scope="col">19:00</th>
-                    <th scope="col">20:00</th>
-                    <th scope="col">21:00</th>
-                </tr>     
-            </thead>
+        <div class="schedule-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Deň</th>
+                        <th scope="col">7:00</th>
+                        <th scope="col">8:00</th>
+                        <th scope="col">9:00</th>
+                        <th scope="col">10:00</th>
+                        <th scope="col">11:00</th>
+                        <th scope="col">12:00</th>
+                        <th scope="col">13:00</th>
+                        <th scope="col">14:00</th>
+                        <th scope="col">15:00</th>
+                        <th scope="col">16:00</th>
+                        <th scope="col">17:00</th>
+                        <th scope="col">18:00</th>
+                        <th scope="col">19:00</th>
+                        <th scope="col">20:00</th>
+                        <th scope="col">21:00</th>
+                    </tr>     
+                </thead>
 
-            <tbody>
-                <tr>
-                    <th scope="row">Po</th>
-                    <td colspan="2"></td>
-                    <td colspan="2" class="physical-education">Telesná kultúra</td>
-                    <td colspan="2" class="exercise">Webové technológie 1</td>
-                    <td colspan="2" class="exercise">Operačné systémy</td>
-                    <td colspan="2" class="lecture">Lineárna algebra 2</td>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Ut</th>
-                    <td></td>
-                    <td colspan="2" class="lecture">Analýza a zložitosť algoritmov</td>
-                    <td colspan="2" class="lecture">Webové technológie 1</td>
-                    <td colspan="10"></td>
-                </tr>
-                <tr>
-                    <th scope="row">St</th>
-                    <td></td>
-                    <td colspan="2" class="lecture">Operačné systémy</td>
-                    <td colspan="2" class="lecture">Analýza a zložitosť algoritmov</td>
-                    <td></td>
-                    <td colspan="2" class="lecture">Webové technológie 1</td>
-                    <td colspan="7"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Št</th>
-                    <td colspan="15"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Pi</th>
-                    <td colspan="2"></td>
-                    <td class="exercise">Analýza a zložitosť algoritmov</td>  
-                    <td colspan="2" class="exercise">Lineárna algebra 2</td>  
-                    <td colspan="10"></td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr>
+                        <th scope="row">Po</th>
+                        <td colspan="2"></td>
+                        <td colspan="2" class="physical-education" data-day="1" data-start="09:00" data-end="11:00">Telesná kultúra</td>
+                        <td colspan="2" class="exercise" data-day="1" data-start="11:00" data-end="13:00">Webové technológie 1</td>
+                        <td colspan="2" class="exercise" data-day="1" data-start="13:00" data-end="15:00">Operačné systémy</td>
+                        <td colspan="2" class="lecture" data-day="1" data-start="15:00" data-end="17:00">Lineárna algebra 2</td>
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ut</th>
+                        <td></td>
+                        <td colspan="2" class="lecture" data-day="2" data-start="08:00" data-end="10:00">Analýza a zložitosť algoritmov</td>
+                        <td colspan="2" class="lecture" data-day="2" data-start="10:00" data-end="12:00">Webové technológie 1</td>
+                        <td colspan="10"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">St</th>
+                        <td></td>
+                        <td colspan="2" class="lecture" data-day="3" data-start="08:00" data-end="10:00">Operačné systémy</td>
+                        <td colspan="2" class="lecture" data-day="3" data-start="10:00" data-end="12:00">Analýza a zložitosť algoritmov</td>
+                        <td></td>
+                        <td colspan="2" class="lecture" data-day="3" data-start="13:00" data-end="15:00">Webové technológie 1</td>
+                        <td colspan="7"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Št</th>
+                        <td colspan="15"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pi</th>
+                        <td colspan="2"></td>
+                        <td class="exercise" data-day="5" data-start="09:00" data-end="10:00">Analýza a zložitosť algoritmov</td>
+                        <td colspan="2" class="exercise" data-day="5" data-start="10:00" data-end="12:00">Lineárna algebra 2</td>
+                        <td colspan="10"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+        <section class="current-lesson-status">
+            <p id="current-lesson-status" aria-live="polite">
+                Kontrolujem aktuálny rozvrh...
+            </p>
+        </section>
+    
+
+        <section class="semester-progress">
             
-        </table>
+            <p id="semester-progress-label">
+                Počítam priebeh semestra...
+            </p>
+
+            <progress id="semester-progress" value="0" max="100">
+                0%
+            </progress>
+        </section>
 
     </main>
 
