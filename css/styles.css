@@ -500,6 +500,7 @@ td.current-lesson {
     padding: 1rem 0 0 0;
 }
 
+
 td.filtered-out {
     color: transparent;
     background-color: transparent;
@@ -659,6 +660,13 @@ button.filter-button.active {
         
     }
 
+
+    section ul {
+        left: 0;
+    }
+
+
+
     nav ul {
         display: none;
     
@@ -756,56 +764,56 @@ button.filter-button.active {
     }
 
     /* ked je vybrany monitor */
-    .workspace:has(.hotspot-monitor:hover) .mobile-panel {
+    .workspace:has(.hotspot-monitor:hover, .hotspot-monitor:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
     }
 
-    .workspace:has(.hotspot-monitor:hover) .mobile-panel-monitor {
+    .workspace:has(.hotspot-monitor:hover, .hotspot-monitor:focus) .mobile-panel-monitor {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .workspace:has(.hotspot-mouse:hover) .mobile-panel {
+    .workspace:has(.hotspot-mouse:hover, .hotspot-mouse:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
     }
 
-    .workspace:has(.hotspot-mouse:hover) .mobile-panel-mouse {
+    .workspace:has(.hotspot-mouse:hover, .hotspot-mouse:focus) .mobile-panel-mouse {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .workspace:has(.hotspot-keyboard:hover) .mobile-panel {
+    .workspace:has(.hotspot-keyboard:hover, .hotspot-keyboard:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
     }
 
-    .workspace:has(.hotspot-keyboard:hover) .mobile-panel-keyboard {
+    .workspace:has(.hotspot-keyboard:hover, .hotspot-keyboard:focus) .mobile-panel-keyboard {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .workspace:has(.hotspot-headphones:hover) .mobile-panel {
+    .workspace:has(.hotspot-headphones:hover, .hotspot-headphones:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
     }
 
-    .workspace:has(.hotspot-headphones:hover) .mobile-panel-headphones {
+    .workspace:has(.hotspot-headphones:hover, .hotspot-headphones:focus) .mobile-panel-headphones {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .workspace:has(.hotspot-router:hover) .mobile-panel {
+    .workspace:has(.hotspot-router:hover, .hotspot-router:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
     }
 
-    .workspace:has(.hotspot-router:hover) .mobile-panel-router {
+    .workspace:has(.hotspot-router:hover, .hotspot-router:focus) .mobile-panel-router {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
