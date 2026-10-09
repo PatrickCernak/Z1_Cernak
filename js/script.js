@@ -162,9 +162,9 @@ filterButtons.forEach(function (button) {
                 selectedFilter === "all" ||
                 cell.classList.contains(selectedFilter)
             ) {
-                cell.style.visibility = "visible";
+                cell.classList.remove("filtered-out");
             } else {
-                cell.style.visibility = "hidden";
+                cell.classList.add("filtered-out");
             }
         });
     });
