@@ -2,6 +2,7 @@ Patrik Černák
 Krúžok: Pondelok 11:00
 
 Odkaz na stránku na školskom serveri:
+https://webte1.fei.stuba.sk/~xcernakp/
 
 Obsah:
 Na tejto stránke sa môžete dozvedieť niečo o mne, pozrieť si môj životopis a moje pracovné prostredie. Nájdete tu aj môj rozvrh hodín a mapu s miestami, kde ma môžete nájsť. Stránku som vytvoril pomocou HTML, CSS a JavaScriptu.

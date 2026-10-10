@@ -242,9 +242,7 @@ footer a:hover {
 
 
 
-
-
-
+/* cv */
 
 .cv-container {
     display: grid;
@@ -326,7 +324,7 @@ footer a:hover {
 
 
 
-
+/* workspace */
 .workspace-image {
     position: relative;
     width: 100%;
@@ -439,7 +437,7 @@ footer a:hover {
 
 
 
-
+/* schedule */
 table {
     width: 100%;
     table-layout: fixed;
@@ -505,8 +503,6 @@ td.filtered-out {
     color: transparent;
     background-color: transparent;
     outline: none;
-    
-    
 }
 
 
@@ -515,7 +511,6 @@ td.filtered-out {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem;
-
 }
 
 button.filter-button {
@@ -535,9 +530,8 @@ button.filter-button:hover {
 
 button.filter-button.active {
     color: var(--color-gold);
-    font-weight: 700;
-    border: 3px solid var(--color-surface);
-    
+    font-weight: 800;
+    border: 4px solid var(--color-surface);
 }
 
 
@@ -572,7 +566,7 @@ button.filter-button.active {
 
 
 
-
+/* map */
 #map {
     height: 700px;
     width: 100%;
@@ -644,7 +638,7 @@ button.filter-button.active {
     border: 1px solid var(--color-surface);
     background-color: var(--color-background);
     color: var(--color-text);
-    font: inherit;
+    font-family: "Inter", sans-serif;
 }
 
 .map-controls button {
@@ -658,9 +652,9 @@ button.filter-button.active {
 
 
 
-
+/* only for schedule */
 @media (max-width: 1200px) {
-    /* Horizontal scrolling on mobile */
+    /* Horizontal scrolling */
     .schedule-table-wrapper {
         width: 100%;
         overflow-x: auto;
@@ -679,23 +673,14 @@ button.filter-button.active {
 
 
 
-
+/* phone */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
-        
+        display: block; 
     }
-
-
-    section ul {
-        left: 0;
-    }
-
-
 
     nav ul {
         display: none;
-    
     }
 
     nav ul.open {
@@ -703,6 +688,11 @@ button.filter-button.active {
         flex-direction: column;
         gap: 1.5rem;
         margin-top: 1.5rem;
+    }
+
+
+    section ul {
+        left: 0;
     }
 
     .footer-content {
@@ -727,7 +717,7 @@ button.filter-button.active {
 
     
 
-
+    /* cv phone */
     .cv-container {
         grid-template-columns: 1fr;
     }
@@ -744,7 +734,7 @@ button.filter-button.active {
 
 
 
-
+    /* workspace phone */
     .hotspot-panel {
         display: none;
     }
@@ -846,7 +836,7 @@ button.filter-button.active {
     }
 
 
-
+    /* map phone */
     #map {
         height: 60vh;
         min-height: 350px;

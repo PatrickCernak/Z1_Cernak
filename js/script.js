@@ -5,8 +5,7 @@ const totalDuration = SEMESTER_END - SEMESTER_START;
 const elapsedDuration = currentDate - SEMESTER_START;
 
 const semesterPercentage = Math.min(
-    100,
-    Math.max(0, (elapsedDuration / totalDuration) * 100)
+    100, Math.max(0, (elapsedDuration / totalDuration) * 100)
 );
 
 const progressBar = document.getElementById("semester-progress");
@@ -54,6 +53,7 @@ if (currentLessonStatus && lessonCells.length > 0) {
         }
     });
 
+
     if (activeLesson) {
         currentLessonStatus.textContent =
             "Práve prebieha hodina: " +
@@ -75,8 +75,7 @@ if (currentLessonStatus && lessonCells.length > 0) {
             const dayDifference =
                 (Number(cell.dataset.day) - currentDay + 7) % 7;
 
-            let difference =
-                dayDifference * 24 * 60 + startMinutes - currentMinutes;
+            let difference = dayDifference * 24 * 60 + startMinutes - currentMinutes;
 
             if (difference <= 0) {
                 difference += 7 * 24 * 60;
@@ -144,7 +143,7 @@ const scheduleCells = document.querySelectorAll("tbody td.lecture, tbody td.exer
 filterButtons.forEach(function (button) {
      button.addEventListener("click", function () {
 
-         filterButtons.forEach(function (filterButton) {
+        filterButtons.forEach(function (filterButton) {
             filterButton.classList.remove("active");
         });
 
@@ -153,10 +152,7 @@ filterButtons.forEach(function (button) {
         const selectedFilter = button.dataset.filter;
 
         scheduleCells.forEach(function (cell) {
-            if (
-                selectedFilter === "all" ||
-                cell.classList.contains(selectedFilter)
-            ) {
+            if (selectedFilter === "all" || cell.classList.contains(selectedFilter)) {
                 cell.classList.remove("filtered-out");
             } else {
                 cell.classList.add("filtered-out");
@@ -377,9 +373,7 @@ renderPointSelect();
 
 
 
-document
-    .getElementById("calculate-route")
-    .addEventListener("click", function () {
+document .getElementById("calculate-route") .addEventListener("click", function () {
         const pointSelect = document.getElementById("point-select");
         const targetSelect = document.getElementById("target-select");
         const routeResult = document.getElementById("route-result");
