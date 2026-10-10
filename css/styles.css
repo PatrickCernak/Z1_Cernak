@@ -846,4 +846,9 @@ button.filter-button.active {
     }
 
 
+
+    #map {
+        height: 60vh;
+        min-height: 350px;
+    }
 }

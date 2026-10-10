@@ -171,7 +171,7 @@ filterButtons.forEach(function (button) {
 
 
 
-
+if (document.getElementById("map")) {
 // ========================================
 // 1. LEAFLET MAP
 // ========================================
@@ -454,3 +454,4 @@ document
 
         selectedPoint.marker.openPopup();
     });
+}
