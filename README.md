@@ -15,4 +15,4 @@ Mapová knižnica: [Leaflet](https://github.com/Leaflet/Leaflet) – BSD 2-Claus
 
 Font: [Inter](https://github.com/rsms/inter) – SIL Open Font License 1.1 (OFL), [licencia](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 
-AI som použil najmä pri zložitejších úlohách v javascripte a pomoc pri hľadaní a opravovaní chýb.
+AI som použil najmä pri zložitejších úlohách v JavaScripte a pomoc pri hľadaní a opravovaní chýb.

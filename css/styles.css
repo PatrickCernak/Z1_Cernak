@@ -385,7 +385,7 @@ footer a:hover {
     color: var(--color-text);
 
     border: 1px solid var(--color-gold);
-    border-radius: 12px;
+    border-radius: var(--radius);
 
     text-align: left;
 
@@ -505,6 +505,8 @@ td.filtered-out {
     color: transparent;
     background-color: transparent;
     outline: none;
+    
+    
 }
 
 
@@ -537,6 +539,7 @@ button.filter-button.active {
     border: 3px solid var(--color-surface);
     
 }
+
 
 
 .semester-progress {
@@ -654,6 +657,29 @@ button.filter-button.active {
 
 
 
+
+
+@media (max-width: 1200px) {
+    /* Horizontal scrolling on mobile */
+    .schedule-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule-table-wrapper table {
+        min-width: 1000px;
+    }
+
+    .schedule-table-wrapper th, .schedule-table-wrapper td {
+        padding: 0.3rem;
+        font-size: 0.70rem;
+    }
+}
+
+
+
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -756,14 +782,14 @@ button.filter-button.active {
         margin: 0.5rem 0 0;
     }
 
-    /* defaultne zobraz prvy panel */
+    /* Show the first panel by default */
     .mobile-panel-monitor {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    /* ked je vybrany monitor */
+    /* Show the monitor panel when selected */
     .workspace:has(.hotspot-monitor:hover, .hotspot-monitor:focus) .mobile-panel {
         opacity: 0;
         visibility: hidden;
@@ -818,25 +844,6 @@ button.filter-button.active {
         visibility: visible;
         transform: translateY(0);
     }
-    
-
-
-
-
-
-
-    /* Horizontalne scrolovanie v Schedule */
-    .schedule-table-wrapper {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .schedule-table-wrapper table {
-        min-width: 1000px;
-    }
-
-
 
 
 }

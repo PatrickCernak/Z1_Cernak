@@ -1,4 +1,4 @@
-const SEMESTER_START = new Date("2026-09-01T00:00:00");
+const SEMESTER_START = new Date("2026-09-14T00:00:00");
 const SEMESTER_END = new Date("2027-02-14T23:59:59");
 const currentDate = new Date();
 const totalDuration = SEMESTER_END - SEMESTER_START;
@@ -123,8 +123,6 @@ if (currentLessonStatus && lessonCells.length > 0) {
 
 
 
-
-
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("nav ul");
 
@@ -140,11 +138,8 @@ menuToggle.addEventListener("click", function () {
 
 
 
-
-
 const filterButtons = document.querySelectorAll(".filter-button");
-const scheduleCells = document.querySelectorAll("tbody td.lecture, tbody td.exercise, tbody td.physical-education"
-);
+const scheduleCells = document.querySelectorAll("tbody td.lecture, tbody td.exercise, tbody td.physical-education");
 
 filterButtons.forEach(function (button) {
      button.addEventListener("click", function () {
@@ -169,12 +164,6 @@ filterButtons.forEach(function (button) {
         });
     });
 });
-
-
-
-
-
-
 
 
 
