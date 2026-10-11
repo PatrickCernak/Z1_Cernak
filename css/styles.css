@@ -350,28 +350,28 @@ footer a:hover {
 }
 
 .hotspot-monitor {
-    left: 60%;
+    left: 65%;
     top: 13%;
 }
 
 .hotspot-mouse {
-    left: 76%;
-    top: 56%;
+    left: 80%;
+    top: 84%;
 }
 
 .hotspot-router {
-    left: 6%;
-    top: 28%;
+    left: 8%;
+    top: 38%;
 }
 
 .hotspot-keyboard {
-    left: 30%;
-    top: 54%;
+    left: 28%;
+    top: 80%;
 }
 
 .hotspot-headphones {
-    left: 82%;
-    top: 37%;
+    left: 88%;
+    top: 55%;
 }
 .hotspot-panel {
     position: absolute;
